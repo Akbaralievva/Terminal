@@ -1,0 +1,73 @@
+package com.itproger;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args)
+    {
+        int pin = 2023;
+        int money = 100000;
+        System.out.println("Welcome to terminal bank!  ");
+        System.out.println("Please, enter your PIN code: (****)  \n");
+        Scanner pin1 = new Scanner(System.in);
+        int p = pin1.nextInt();
+
+
+        while (true)
+        {
+        if (p == pin)
+        {
+                System.out.println("The password is correct!");
+                break;
+        }
+
+
+        else
+        {
+            System.out.println("Please, enter the password again:(****)");
+            p = pin1.nextInt();
+        }
+        }
+
+
+
+        int see=1;
+        int add=2;
+        int get=3;
+        int exit=4;
+
+        System.out.println("Write 1 : If you want to see your money!");
+        System.out.println("Write 2 : If you want to add money!");
+        System.out.println("Write 3 : If you want to get money!");
+        System.out.println("Write any number expect(1,2,3) : If you want to exit");
+
+        Scanner monney=new Scanner(System.in);
+        int m=monney.nextInt();
+
+        if(m==see)
+        {
+            System.out.println("You have:  " +  money);
+        }
+        else if(m==add)
+        {
+            System.out.println("Write, how much money you want to add: ");
+            Scanner mon=new Scanner(System.in);
+            int admoney=mon.nextInt();
+            int addmoney=admoney+money;
+            System.out.println("Operation completed successfully!\n" +
+                    "Your new balance is:  "+addmoney);
+        }
+
+         else if(m==get)
+         {
+             System.out.println("Write, how much money you want to get: ");
+            Scanner gget=new Scanner(System.in);
+            int ggetmoney=gget.nextInt();
+            int getmoney=money-ggetmoney;
+            System.out.println("Operation completed successfully!\n" +
+                    "Your new balance is:  "+getmoney);
+        }
+        else{
+            System.out.println(" Take the card!\n " +
+                    " Have a nice day!");
+            }
+    }
+}
